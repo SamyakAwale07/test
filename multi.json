@@ -1,0 +1,242 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2025-03-26T07:33:12.749Z",
+        "line": 5,
+        "name": "Trees effect on global warming",
+        "description": "",
+        "id": "capture-the-number-of-trees-planted-and-show-relation-to-global-warming;trees-effect-on-global-warming",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5275000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "There are no trees numbered in a given region",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_trees_state()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Each user plants a tree and updates",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.plant_tree()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1996200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The temperature is updated in the temperature log",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.set_init_temp()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Temperature is captured over a few days",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.capture_temp()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2002600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The graph should show the relation between the number of trees and temperature",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.validate_graph()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TempTracker"
+          },
+          {
+            "name": "@P0"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-03-26T07:33:12.795Z",
+        "line": 14,
+        "name": "No trees planted - failed attempt",
+        "description": "",
+        "id": "capture-the-number-of-trees-planted-and-show-relation-to-global-warming;no-trees-planted---failed-attempt",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1071600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "There are no trees numbered in a given region",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_trees_state()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Each user plants a tree and updates",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.plant_tree()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The temperature is updated in the temperature log",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.set_init_temp()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1129000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Temperature is captured over a few days",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.capture_temp()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verified graph is showing no updates expected [false] but found [true]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:751)\r\n\tat com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_updates(TemperatureTrackerTests.java:44)\r\n\tat ✽.The graph should show no updates(file:///C:/Users/ASUS/Documents/projects/aio/cucumber-java-demo/src/test/resources/features/TempTracker.feature:19)\r\n",
+              "duration": 2039500,
+              "status": "failed"
+            },
+            "line": 19,
+            "name": "The graph should show no updates",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_updates()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TempTracker"
+          },
+          {
+            "name": "@P0"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-03-26T07:33:12.814Z",
+        "line": 22,
+        "name": "Skipped trees - skipped steps case",
+        "description": "",
+        "id": "capture-the-number-of-trees-planted-and-show-relation-to-global-warming;skipped-trees---skipped-steps-case",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "There are no trees numbered in a given region",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_trees_state()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Verified graph is showing no updates expected [false] but found [true]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:136)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:751)\r\n\tat com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_updates(TemperatureTrackerTests.java:44)\r\n\tat ✽.The graph should show no updates(file:///C:/Users/ASUS/Documents/projects/aio/cucumber-java-demo/src/test/resources/features/TempTracker.feature:24)\r\n",
+              "duration": 1007500,
+              "status": "failed"
+            },
+            "line": 24,
+            "name": "The graph should show no updates",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.no_updates()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "Each user plants a tree and updates",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.plant_tree()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The temperature is updated in the temperature log",
+            "match": {
+              "location": "com.aiotests.samples.stepdefs.TemperatureTrackerTests.set_init_temp()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TempTracker"
+          },
+          {
+            "name": "@P0"
+          }
+        ]
+      }
+    ],
+    "name": "Capture the number of trees planted and show relation to global warming",
+    "description": "",
+    "id": "capture-the-number-of-trees-planted-and-show-relation-to-global-warming",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/TempTracker.feature",
+    "tags": [
+      {
+        "name": "@TempTracker",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
