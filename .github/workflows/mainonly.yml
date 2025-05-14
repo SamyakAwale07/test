@@ -1,5 +1,4 @@
-
-name: abc 
+name: onlyMain 
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
