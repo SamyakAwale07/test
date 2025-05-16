@@ -28,6 +28,10 @@ on:
         type: number
         description: 'Version to release'
         required: true
+      current_version:
+        type: string
+        description: 'Version to release'
+        required: true
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
