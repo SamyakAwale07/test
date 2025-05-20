@@ -1,34 +1,28 @@
-
-name: abc 
+name: AIO Params
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        type: environment
+      Cycle_Key:
+        type: string
         description: 'Select an environment'
-        required: true
-      confirm_deploy:
-        type: boolean
+        required: false
+      Project_key:
+        type: string
         description: 'Are you sure you want to deploy?'
         default: false
-      release_version:
+      Case_key_list:
         type: string
         description: 'Version to release'
-        required: true
+        required: false
         default: '1.0.0'
-      deployment_region:
-        type: choice
+      case_auto_key_list:
+        type: string
         description: 'Choose a region'
-        options:
-          - us-east
-          - us-west
-          - eu-central
-        default: us-east
-      current_version:
-        type: number
+      AIO_API_Token:
+        type: string
         description: 'Version to release'
-        required: true
+        required: false
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -36,8 +30,6 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v4
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
